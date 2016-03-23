@@ -2,7 +2,7 @@ class UserRegistrationsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def create
     @user = UserRegistration.new(user_registration_params)
-    @user.status = "Active"
+    @user.status = "Activ"
     if @user.save
       render :json => {status: true,id: @user.id}
     else 
